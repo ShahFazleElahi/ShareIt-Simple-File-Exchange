@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Share</title>
+    <title>ShareIt: Simple File Exchange</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Upload a File</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-    </form>
+    <div class="container">
+        <h1>Welcome to ShareIt</h1>
+        <p>Upload your files easily and securely.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input">
+            <input type="submit" value="Upload" class="submit-button">
+        </form>
+    </div>
 </body>
 </html>
